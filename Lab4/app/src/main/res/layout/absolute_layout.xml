@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/absoluteLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn1"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:layout_x="50px"
+        android:layout_y="361px"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn2"
+        android:textColor="@color/white"
+        android:text="Register"
+        android:layout_x="350px"
+        android:layout_y="361px"
+        />
+
+</AbsoluteLayout>

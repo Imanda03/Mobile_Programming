@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MyDemoApplicationLab3</string>
+    <string name="reminder">Reminder</string>
+    <string name="done">Done</string>
+</resources>
