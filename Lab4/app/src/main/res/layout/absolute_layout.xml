@@ -6,20 +6,24 @@
     >
 
     <Button
-        android:layout_width="100dp"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:id="@+id/btn1"
         android:text="Login"
-        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textFontWeight="700"
+        android:textColor="@color/green"
         android:layout_x="50px"
         android:layout_y="361px"/>
 
     <Button
-        android:layout_width="100dp"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:id="@+id/btn2"
-        android:textColor="@color/white"
+        android:textColor="@color/green"
         android:text="Register"
+        android:textSize="20dp"
+        android:textFontWeight="700"
         android:layout_x="350px"
         android:layout_y="361px"
         />

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Form_Lab6</string>
+    <string name="fullName">Full Name</string>
+    <string name="userName">Username</string>
+    <string name="password">Password</string>
+    <string-array name="select">
+        <item>item 1</item>
+        <item>item 2</item>
+        <item>item 3</item>
+    </string-array>
+</resources>
