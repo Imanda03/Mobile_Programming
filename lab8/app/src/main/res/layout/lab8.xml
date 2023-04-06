@@ -5,9 +5,9 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:layout_width="96dp"
-        android:layout_height="113dp"
-        android:src="@drawable/bitmap" />
+        android:layout_width="162dp"
+        android:layout_height="160dp"
+        android:src="@drawable/shape" />
 
 
 </LinearLayout>

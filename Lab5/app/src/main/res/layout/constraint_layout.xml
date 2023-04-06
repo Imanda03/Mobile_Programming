@@ -15,7 +15,7 @@
         android:layout_marginRight="16dp"
         android:gravity="center"
         android:padding="10dp"
-        android:text="Saban Magar"
+        android:text="Sugam Poudel"
         android:textFontWeight="700"
         android:textColor="@color/black"
         android:textSize="30sp"
