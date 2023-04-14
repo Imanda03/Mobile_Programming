@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">lab10_a</string>
+    <string-array name="select">
+        <item>item 1</item>
+        <item>item 2</item>
+        <item>item 3</item>
+    </string-array>
+</resources>

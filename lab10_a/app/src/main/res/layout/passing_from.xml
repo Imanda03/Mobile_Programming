@@ -1,63 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:text="Form"
-        android:textSize="30sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="41dp"
-        android:layout_gravity="left"
-        android:layout_marginTop="20sp"
-        android:text="Full Name:"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
+    android:padding="15dp"
+    tools:context="com.androidexample.First"
+    >
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/fullName"
-        android:textSize="18sp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="41dp"
-        android:layout_gravity="left"
-        android:layout_marginTop="20sp"
-        android:text="Username:"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
+        android:id="@+id/textBox"
+        android:hint="Enter the Email" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/userName"
-        android:textSize="18sp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="41dp"
-        android:layout_gravity="left"
+        android:id="@+id/textBox2"
         android:layout_marginTop="20sp"
-        android:text="Password:"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/password"
-        android:textSize="18sp" />
-
+        android:hint=" Enter the Password" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="41dp"
@@ -80,7 +40,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:padding="10dp"
-            android:text="Male" />
+            android:text="Male"
+            android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
             android:id="@+id/female"
@@ -88,9 +49,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:padding="10dp"
-            android:text="Female" />
+            android:text="Female"
+            android:onClick="onRadioButtonClicked"/>
     </RadioGroup>
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="41dp"
@@ -140,18 +101,19 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
-    <Spinner
+     <Spinner
         android:id="@+id/select"
         android:layout_width="match_parent"
         android:layout_height="40dp"
 
         />
 
+
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="200dp"
-        android:text="Submit" />
+        android:id="@+id/passButton"
+        android:layout_marginTop="20sp"
+        android:text="Submit"/>
 
 </LinearLayout>
