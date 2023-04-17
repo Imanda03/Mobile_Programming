@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="15dp"
-    tools:context="com.androidexample.First"
+    tools:context=" .First"
     >
     <EditText
         android:layout_width="match_parent"
@@ -40,8 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:padding="10dp"
-            android:text="Male"
-            android:onClick="onRadioButtonClicked"/>
+            android:text="Male"/>
 
         <RadioButton
             android:id="@+id/female"
@@ -49,8 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:padding="10dp"
-            android:text="Female"
-            android:onClick="onRadioButtonClicked"/>
+            android:text="Female"/>
     </RadioGroup>
     <TextView
         android:layout_width="wrap_content"

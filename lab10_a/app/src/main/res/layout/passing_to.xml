@@ -4,26 +4,45 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.androidexample.Second">
+    tools:context=".Second"
+    android:padding="20sp">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
         android:id="@+id/text"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:textSize="20sp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
         android:id="@+id/text2"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:textSize="20sp"
+        />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Radio: "
+        android:text=" "
         android:id="@+id/radio"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:textSize="20sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" "
+        android:id="@+id/checkbox"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" "
+        android:id="@+id/spinner"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
 
 </LinearLayout>
