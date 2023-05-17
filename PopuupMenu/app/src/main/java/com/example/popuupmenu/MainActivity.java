@@ -6,20 +6,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.PopupMenu;
 import android.widget.Toast;
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
 public class MainActivity extends AppCompatActivity {
     Button button;
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
-
         button = (Button) findViewById(R.id.clickBtn);
-
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
