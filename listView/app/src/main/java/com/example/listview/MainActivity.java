@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
                 arrayList.add(s1);
             }
 
-            arrayList.get(0).SubItems.Add("subItems");
 
             ArrayAdapter adapter = new ArrayAdapter<String> (this,android.R.layout.simple_list_item_1,arrayList);
             list.setAdapter(adapter);
