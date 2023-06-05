@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">GridView</string>
+    String[] carBrands = {
+    "Ferrari",
+    "McLaren",
+    "Jaguar",
+    "Skoda",
+    "Suzuki",
+    "Hyundai",
+    "Toyota",
+    "Renault",
+    "Mercedes",
+    "BMW",
+    "Ford",
+    "Honda",
+    "Chevrolet",
+    "Volkswagon",
+    };
+</resources>
