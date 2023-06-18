@@ -2,8 +2,12 @@ package com.example.project;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Database extends SQLiteOpenHelper {
 
@@ -49,5 +53,36 @@ public class Database extends SQLiteOpenHelper {
         contentValues.put(Database.EMAIL, employeeModelClass.getEmail());
         sqLiteDatabase = this.getWritableDatabase();
         sqLiteDatabase.insert(Database.TABLE_NAME,null,contentValues);
+    }
+    public List<EmployeeModelClass> getEmployeeList(){
+        String sql = "select * from " + TABLE_NAME;
+        sqLiteDatabase = this.getReadableDatabase();
+        List<EmployeeModelClass> storeEmployee = new ArrayList<>();
+        Cursor cursor = sqLiteDatabase.rawQuery(sql,null);
+        if (cursor.moveToFirst()){
+            do {
+                int id = Integer.parseInt(cursor.getString(0));
+                String name = cursor.getString(1);
+                String email = cursor.getString(2);
+                storeEmployee.add(new EmployeeModelClass(id,name,email));
+            }while (cursor.moveToNext());
+        }
+        cursor.close();
+        return storeEmployee;
+    }
+
+    public void updateEmployee(EmployeeModelClass employeeModelClass){
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(Database.NAME,employeeModelClass.getName());
+        contentValues.put(Database.EMAIL,employeeModelClass.getEmail());
+        sqLiteDatabase = this.getWritableDatabase();
+        sqLiteDatabase.update(TABLE_NAME,contentValues,ID + " = ?" , new String[]
+                {String.valueOf(employeeModelClass.getId())});
+    }
+
+    public void deleteEmployee(int id){
+        sqLiteDatabase = this.getWritableDatabase();
+        sqLiteDatabase.delete(TABLE_NAME, ID + " = ? ", new String[]
+                {String.valueOf(id)});
     }
 }

@@ -28,7 +28,7 @@
         android:layout_margin="5dp"
         android:id="@+id/button_add"
         android:text="Add Employee"
-        android:background="#105013"
+        android:background="@color/green"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
@@ -37,7 +37,7 @@
         android:layout_margin="5dp"
         android:id="@+id/button_view"
         android:text="View Employee"
-        android:background="#0288D1"
+        android:background="@color/blue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 

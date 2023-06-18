@@ -1,20 +1,20 @@
 package com.example.project;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
+public class MainActivity extends AppCompatActivity {
 
-public class MainActivity  extends AppCompatActivity {
-
-    EditText editText_name, editText_email;
-    Button button_add, button_view;
+    EditText editText_name,editText_email;
+    Button button_add,button_view;
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
 
@@ -23,18 +23,35 @@ public class MainActivity  extends AppCompatActivity {
         button_add = findViewById(R.id.button_add);
         button_view = findViewById(R.id.button_view);
 
+
         button_add.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 String stringName = editText_name.getText().toString();
                 String stringEmail = editText_email.getText().toString();
 
-                if(stringName.length() <=0 || stringEmail.length() <=0){
+                if (stringName.length() <=0 || stringEmail.length() <=0){
                     Toast.makeText(MainActivity.this, "Enter All Data", Toast.LENGTH_SHORT).show();
-                }else{
-                    Database database = new Database(MainActivity.this);
+                }else {
+                    Database databaseHelperClass = new Database(MainActivity.this);
+                    EmployeeModelClass employeeModelClass = new EmployeeModelClass(stringName,stringEmail);
+                    databaseHelperClass.addEmployee(employeeModelClass);
+                    Toast.makeText(MainActivity.this, "Add Employee Successfully", Toast.LENGTH_SHORT).show();
+                    finish();
+                    startActivity(getIntent());
                 }
             }
         });
+
+
+        button_view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,ViewEmployeeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 }
