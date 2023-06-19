@@ -1,5 +1,6 @@
 package com.example.project;
 
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -12,38 +13,35 @@ import java.util.List;
 public class Database extends SQLiteOpenHelper {
 
     //Database version
-    private static final int DATABSE_VERSION = 1;
-
+    private static final int DATABASE_VERSION = 1;
     //Database Name
     private static final String DATABASE_NAME = "employee_database";
-
-    //DataBase Table Name
+    //Database Table name
     private static final String TABLE_NAME = "EMPLOYEE";
-
     //Table columns
     public static final String ID = "id";
     public static final String NAME = "name";
     public static final String EMAIL = "email";
     private SQLiteDatabase sqLiteDatabase;
 
-    //creating table query
-    private static final String CREATE_TABLE = "create table " + TABLE_NAME + "("+ID+
-            "INTEGER PRIMARY KEY AUTOINCREMENT," + NAME + "TEXT NOT NULL," +EMAIL+"TEXT NOT NULL,);";
 
+    //creating table query
+    private static final String CREATE_TABLE = "create table " + TABLE_NAME +"("+ID+
+            " INTEGER PRIMARY KEY AUTOINCREMENT," + NAME + " TEXT NOT NULL,"+EMAIL+" TEXT NOT NULL);";
     //Constructor
-    public Database(Context context){
-        super(context, DATABASE_NAME,null,DATABSE_VERSION);
+    public Database (Context context){
+        super(context,DATABASE_NAME,null,DATABASE_VERSION);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-    db.execSQL(CREATE_TABLE);
+        db.execSQL(CREATE_TABLE);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-    db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
-    onCreate(db);
+        db.execSQL(" DROP TABLE IF EXISTS " + TABLE_NAME);
+        onCreate(db);
     }
 
     //Add Employee Data
@@ -52,8 +50,9 @@ public class Database extends SQLiteOpenHelper {
         contentValues.put(Database.NAME, employeeModelClass.getName());
         contentValues.put(Database.EMAIL, employeeModelClass.getEmail());
         sqLiteDatabase = this.getWritableDatabase();
-        sqLiteDatabase.insert(Database.TABLE_NAME,null,contentValues);
+        sqLiteDatabase.insert(Database.TABLE_NAME, null,contentValues);
     }
+
     public List<EmployeeModelClass> getEmployeeList(){
         String sql = "select * from " + TABLE_NAME;
         sqLiteDatabase = this.getReadableDatabase();
@@ -85,4 +84,5 @@ public class Database extends SQLiteOpenHelper {
         sqLiteDatabase.delete(TABLE_NAME, ID + " = ? ", new String[]
                 {String.valueOf(id)});
     }
+
 }

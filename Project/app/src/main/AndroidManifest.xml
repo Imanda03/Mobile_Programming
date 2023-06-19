@@ -12,20 +12,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Project"
         tools:targetApi="31" >
-        <activity
-            android:name=".ViewEmployeeActivity"
-            android:exported="false"
-            android:label="@string/title_activity_view_employee"
-            android:theme="@style/Theme.Project" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ViewEmployeeActivity"
+            android:label="@string/title_activity_view_employee"/>
+        <activity android:name=".EmployeeModelClass"/>
     </application>
 
 </manifest>

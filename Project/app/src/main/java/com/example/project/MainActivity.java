@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.project.ViewEmployeeActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     EditText editText_name,editText_email;
@@ -47,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         button_view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,ViewEmployeeActivity.class);
+                Intent intent = new Intent(MainActivity.this, ViewEmployeeActivity.class);
                 startActivity(intent);
             }
         });
